@@ -1,5 +1,4 @@
 
-````markdown
 # 🏥 MediCare CMS — Clinic Management System (MERN Stack)
 
 **MediCare CMS** is a modern, full-stack Clinic Management System designed to simplify day-to-day clinic operations. It streamlines patient registration, live queue management, billing, and medical record tracking while maintaining a clean, low-cognitive-load user experience.
