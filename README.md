@@ -276,8 +276,16 @@ Once created, log in via the frontend.
 
 ## 📄 License
 
-Distributed under the **MIT License**.
-See `LICENSE` for more information.
+This project is licensed under the **MIT License**.
+
+Copyright (c) 2026 TAKHELLAMBAM ADIYA SINGH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction.
+
+See the [LICENSE](./LICENSE) file for full license text.
+
 
 ```
 
