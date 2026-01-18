@@ -9,17 +9,23 @@ import patientRoutes from "./routes/patientRoutes.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import prescriptionRoutes from "./routes/prescriptionRoutes.js";
-import invoiceRoutes from "./routes/invoiceRoutes.js"; // Note the .js extension is required in ES Modules
+import invoiceRoutes from "./routes/invoiceRoutes.js";
 
-// 1. Config
 dotenv.config();
 connectDB();
 
 const app = express();
 
-// 2. Middleware
 app.use(express.json()); // Parse JSON bodies
-app.use(cors());         // Enable CORS
+
+
+app.use(cors({
+    origin: process.env.CLIENT_URL || '*', // Use env var if exists, else allow all
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(helmet());       // Security headers
 app.use(morgan('dev'));  // Logger
 
@@ -27,15 +33,12 @@ app.use(morgan('dev'));  // Logger
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
-app.use('/api/auth', authRoutes); // Mount the auth routes
-app.use('/api/users', userRoutes); // Mount user routes
-app.use('/api/patients', patientRoutes); // Mount patient routes
-app.use('/api/appointments', appointmentRoutes); // Mount appointment routes
+app.use('/api/auth', authRoutes); 
+app.use('/api/users', userRoutes); 
+app.use('/api/patients', patientRoutes); 
+app.use('/api/appointments', appointmentRoutes); 
 app.use('/api/prescriptions', prescriptionRoutes);
-app.use('/api/invoices', invoiceRoutes); // <--- Add this// Mount
-
-// Placeholder for future routes
-// app.use('/api/auth', authRoutes);
+app.use('/api/invoices', invoiceRoutes); 
 
 // 4. Error Handling (Global)
 app.use((err, req, res, next) => {
