@@ -6,6 +6,25 @@
 The application is built with the **MERN stack** and features the custom **“Pulse” Design System** — a teal-and-slate visual language optimized for clarity, speed, and trust in medical environments.
 
 ---
+# Demo Credentials
+
+This repository contains demo accounts for testing purposes only.  
+Please note that these credentials are **not for production use**.
+
+## Accounts
+**Receptionist Account**
+- **Email:** sarah@clinic.com  
+  **Password:** password123
+  
+ **Doctor Account**  
+- **Email:** doc@clinic.com  
+  **Password:** password123  
+
+## Notes
+- These accounts are provided for demonstration and testing only.  
+- Do **not** reuse these passwords in real environments.  
+- For production systems, always use secure, unique passwords and follow best practices for authentication.
+---
 
 ## 📑 Table of Contents
 
@@ -286,7 +305,5 @@ in the Software without restriction.
 
 See the [LICENSE](./LICENSE) file for full license text.
 
-
-```
 
 
